@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+
+:root {
+    --backgroundColor: #f5e9e2;
+    --formBackground: #e3b5a4;
+    --buttonColor: #d44d5c;
+    --whatsappButtonColor: #0b0014;
+    --evaluationButtonColor: #773344;
+    --fontColor: #000;
+    --bodyColor: #f5e9e2;
+    --formUnderlineColor: #3b341f;
+    --fontSize: 14px;
+    --formFieldBackground: #f5e9e2;
+    --lineHeight: 1.929;
+    --faqBackground: #e3b5a4;
+    --faqContentColor: #f5e9e2;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: var(--fontSize);
+    line-height: var(--lineHeight);
+    color: var(--fontColor);
+    background-color: var(--bodyColor);
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+.wordLogo {
+    font-weight: 900;
+    color: var(--fontColor);
+    font-size: 18px;
+    color: var(--fontColor);
+    margin-left: -14px;
+}
+
+.card {
+    background-color: var(--backgroundColor) !important;
+}
+
+.mainImage {
+    width: 100%;
+    height: auto;
+}
+
+.form-outline .form-control {
+    background: var(--formFieldBackground);
+}
+
+.container {
+    background-color: var(--backgroundColor);
+    max-width: 920px;
+    padding: 20px;
+}
+
+.section1,
+.section2,
+.section3,
+.section4Content,
+.section5a,
+.section6 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.section5Testimonial {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.section2,
+.section3,
+.section4,
+.section5,
+.section5a {
+    margin-top: 2rem;
+}
+
+.section1Left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section1Right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+.b1 {
+    margin-right: 5px;
+    width: 100%;
+    background-color: var(--buttonColor);
+    font-size: 12px;
+}
+
+.evaluationButton {
+    background-color: var(--evaluationButtonColor);
+}
+
+.whatsappButton {
+    background-color: var(--whatsappButtonColor);
+}
+
+.evaluationImage,
+.whatsappImage {
+    width: 40px;
+    height: auto;
+}
+
+.evaluationText,
+.whatsappText {
+    align-self: center;
+    text-transform: capitalize;
+}
+
+.b3 {
+    width: 100%;
+    background-color: var(--buttonColor);
+    font-size: 12px;
+}
+
+.section2Content h1,
+.section5a h2 {
+    text-align: center;
+}
+
+.section2Right {
+    background: var(--formBackground);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.section2Right h3 {
+    text-align: center;
+    color: var(--fontColor);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section2Right h3::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -4px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50%;
+    background: var(--formUnderlineColor);
+
+    /* optional animation */
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.section2Right h3:hover:after {
+    width: 80%;
+    background: var(--formUnderlineColor);
+}
+
+.section3Left {
+    order: 2;
+}
+
+.section3Right {
+    order: 1;
+}
+
+.section4 h2,
+.section5 h2 {
+    text-align: center;
+}
+
+.photoProfile {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 20px 5px;
+}
+
+.section4 h2,
+.section5 h2 {
+    margin-bottom: 20px;
+}
+
+.testimonialCard {
+    border-right: 4px solid var(--formUnderlineColor);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 10px 10px 40px;
+    margin: 0 15px 30px 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonialCard:before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: -17px;
+    border-top: 25px solid var(--buttonColor);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    transform: rotate(45deg);
+}
+
+.testimonialCard:after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -17px;
+    border-top: 25px solid var(--buttonColor);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    transform: rotate(135deg);
+}
+
+.testimonialPic {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.testimonialPic img {
+    width: 100%;
+    height: auto;
+}
+
+.testimonialTitle {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--fontColor);
+    margin: 0;
+}
+
+.testimonialPost {
+    display: inline-block;
+    font-size: 17px;
+    color: var(--fontColor);
+    font-style: italic;
+}
+
+.section5a {
+    background: var(--backgroundColor);
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 89;
+}
+
+.preguntas-frecuentes-contenedor {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 106.25rem;
+}
+
+.preguntas {
+    margin: 0 auto;
+    list-style: none outside;
+}
+
+.pregunta-input {
+    clip: rect(0 0 0 0);
+    margin: -1;
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+}
+
+.pregunta {
+    background: var(--faqBackground);
+    border-bottom: 1px solid #eee;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    font-size: var(--fontSize);
+    letter-spacing: -0.0225rem;
+    line-height: 1.36842;
+    margin-bottom: 16px;
+    padding: 20px 10px;
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+.pregunta:hover {
+    background: var(--buttonColor);
+    color: #fff;
+    cursor: pointer;
+}
+
+.pregunta::before {
+    color: #d60510;
+    content: "\276f";
+    font-size: var(--fontSize);
+    float: left;
+    line-height: 30px;
+    margin: 0 15px 0 5px;
+    transition: all 0.15s ease;
+}
+
+.pregunta:hover::before {
+    color: #fff;
+    opacity: 0.55;
+    transform: rotate(90deg);
+}
+
+.pregunta-input:checked ~ .pregunta {
+    background: #011627;
+    color: #fff;
+}
+
+.pregunta-input:checked ~ .pregunta::before {
+    transform: rotate(-90deg);
+}
+
+.pregunta-input:checked ~ .pregunta::after {
+    content: "\2715";
+    float: right;
+    font-size: var(--fontSize);
+    line-height: 30px;
+}
+
+.pregunta-input:checked ~ .pregunta:hover {
+    background: #d60510;
+    color: #fff;
+}
+
+.pregunta-input:checked ~ .pregunta:hover::before {
+    opacity: 1;
+}
+
+.pregunta-input:checked ~ .respuesta {
+    max-height: 1000px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    transition: max-height 1s ease-in, margin 0.3s ease-in, padding 0.3s ease-in;
+}
+
+.respuesta {
+    background: var(--faqContentColor);
+    border-radius: 11px;
+    line-height: 1.8em;
+    margin-bottom: 25px;
+    margin-top: -17px;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.respuesta p {
+    margin: 0;
+    padding: 25px 25px;
+}
+
+.respuesta-enlace-dotted {
+    border-bottom: 1px dotted #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media (min-width: 400px) {
+    .preguntas-frecuentes-encabezado {
+        font-size: var(--fontSize);
+    }
+}
+
+@media (min-width: 768px) {
+    .pregunta {
+        letter-spacing: -0.01875rem;
+        line-height: 1.33333;
+        padding: 20px;
+    }
+    .respuesta p {
+        letter-spacing: 0.021rem;
+        line-height: 2.1;
+        padding: 25px 50px;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    .section1,
+    .section2,
+    .section3,
+    .section4Content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .b1 {
+        margin-right: 5px;
+        width: 40%;
+    }
+    .section1Left {
+        justify-content: flex-start;
+    }
+    .section3Left,
+    .section4Right {
+        order: 1;
+    }
+
+    .section3Right,
+    .section4Left {
+        order: 2;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section1,
+    .section3,
+    .section4Content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .section2 {
+        grid-template-columns: 2fr 1.3fr;
+    }
+
+    .b1 {
+        margin-right: 5px;
+        width: 40%;
+    }
+
+    .section1Left {
+        justify-content: flex-start;
+    }
+    .section3Left,
+    .section4Right {
+        order: 1;
+    }
+
+    .section3Right,
+    .section4Left {
+        order: 2;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .section1,
+    .section3,
+    .section4Content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .section2 {
+        grid-template-columns: 2fr 1.3fr;
+    }
+
+    .b1 {
+        margin-right: 5px;
+        width: 40%;
+    }
+    .section1Left {
+        justify-content: flex-start;
+    }
+    .section3Left,
+    .section4Right {
+        order: 1;
+    }
+
+    .section3Right,
+    .section4Left {
+        order: 2;
+    }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+    .section1,
+    .section3,
+    .section4Content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .section2 {
+        grid-template-columns: 2fr 1.3fr;
+    }
+
+    .b1 {
+        margin-right: 5px;
+        width: 40%;
+    }
+    .section1Left {
+        justify-content: flex-start;
+    }
+    .section3Left,
+    .section4Right {
+        order: 1;
+    }
+
+    .section3Right,
+    .section4Left {
+        order: 2;
+    }
+}
+
+/* Form Design code start*/
+
+/* Form Global styles */
+
+#formTwo {
+    display: none;
+}
+#formOne {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    border: 0;
+    width: 60%;
+    height: 30px;
+    background-color: var(--formFieldBackground);
+    padding: 10px;
+}
+textarea {
+    border: 0;
+    width: 100%;
+    background-color: var(--formFieldBackground);
+    padding: 10px;
+}
+select {
+    border: 0;
+    width: 60%;
+    height: 35px;
+    background-color: var(--formFieldBackground);
+    padding: 10px;
+}
+
+label[for="name"],
+label[for="email"],
+label[for="phone"],
+label[for="country"],
+label[for="region"],
+label[for="patientType"],
+label[for="condition"],
+label[for="condition"] {
+    width: 30%;
+}
+
+label[for="description"] {
+    width: 100%;
+    display: inline-block;
+}
+
+label[for="willingYes"],
+label[for="willingNo"] {
+    width: 30px;
+}
+
+.formField {
+    margin-bottom: 20px;
+}
+
+/* name */
+
+/*email */
+
+/*phone */
+
+/*country */
+
+/* region*/
+
+/*continue */
+
+.formContinue {
+    width: 70%;
+    display: block;
+    margin-top: 12% !important;
+}
+
+.formContinue,
+.formBack,
+.formSubmit {
+    margin: 0 auto;
+    background-color: var(--buttonColor);
+    padding: 0.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.formBack,
+.formSubmit {
+    display: inline-block;
+    width: 40%;
+    margin: 10px auto;
+}
+
+/*patient type */
+
+/*choose condition */
+
+/* willing for online speech therapy */
+.formField p {
+    margin-bottom: 0;
+}
+
+/* detailed description */
+
+/*submit */
+
+.submit {
+    display: flex;
+}
+
+/* Form Design code end */
